@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F8EF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnCloseResult"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="32sp"
+                    android:textColor="#17251A"
+                    android:background="@drawable/bg_white_round"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EASYQUIZ"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#397A29"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kết quả kiểm tra"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#202920"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnShareResult"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="↗"
+                    android:textSize="27sp"
+                    android:textColor="#17251A"
+                    android:background="@drawable/bg_white_round"/>
+            </LinearLayout>
+
+            <!-- THÀNH TÍCH -->
+            <TextView
+                android:id="@+id/txtAchievementBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:text="🏆 Tuyệt Đỉnh Xuất Sắc! 🎉"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#80521B"
+                android:background="@drawable/bg_yellow_pill"/>
+
+            <!-- MINH HỌA -->
+            <ImageView
+                android:id="@+id/imgResultMascot"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Hình minh họa thành tích"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher"/><!--android:src="@drawable/result_mascot"-->
+
+            <!-- CARD KẾT QUẢ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_result_card">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="✦ CHIẾN BINH EASYQUIZ ✦"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#3A8329"/>
+
+                <TextView
+                    android:id="@+id/txtResultTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Perfect Scorer!"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="#193B1A"/>
+
+                <TextView
+                    android:id="@+id/txtResultDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="Bạn đã hoàn thành bài kiểm tra!"
+                    android:textSize="13sp"
+                    android:textColor="#8A948B"/>
+
+                <!-- PHẦN THƯỞNG -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtRewardCoins"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="🪙 +50 Xu\nThưởng"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#916115"
+                        android:background="@drawable/bg_reward_coins"/>
+
+                    <TextView
+                        android:id="@+id/txtRewardXp"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="7dp"
+                        android:gravity="center"
+                        android:text="⚡ +120 XP\nKinh nghiệm"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#245DB8"
+                        android:background="@drawable/bg_reward_xp"/>
+
+                    <TextView
+                        android:id="@+id/txtRewardStreak"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="🔥 7 Ngày\nChuỗi học"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#B93C3C"
+                        android:background="@drawable/bg_reward_streak"/>
+                </LinearLayout>
+
+                <!-- TỔNG KẾT ĐIỂM -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_score_panel">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressAccuracy"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:progressDrawable="@drawable/bg_accuracy_progress"
+                            android:progress="90"
+                            android:max="100"
+                            android:rotation="-90"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtResultAccuracy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="90%"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="#182B1A"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chính xác"
+                                android:textSize="11sp"
+                                android:textColor="#89958B"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="14dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtResultRank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🏅 Hạng S · Xuất sắc"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#A36B18"/>
+
+                        <TextView
+                            android:id="@+id/txtResultCorrectSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="18 / 20 câu trả lời đúng"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#202A20"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Bạn đã hoàn thành bài kiểm tra."
+                            android:textSize="12sp"
+                            android:textColor="#89958B"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- THỐNG KÊ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCorrectCount"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="✓\n18\nĐúng"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1B9A53"
+                        android:background="@drawable/bg_white_round"/>
+
+                    <TextView
+                        android:id="@+id/txtWrongCount"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        android:gravity="center"
+                        android:text="✕\n02\nSai"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#D83B3B"
+                        android:background="@drawable/bg_white_round"/>
+
+                    <TextView
+                        android:id="@+id/txtResultTime"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="◷\n07:32\nThời gian"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#306BC5"
+                        android:background="@drawable/bg_white_round"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnNextLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Cấp độ tiếp theo  →"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#347D20"/>
+
+                <Button
+                    android:id="@+id/btnReviewAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:text="🎓 Xem lại đáp án"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textColor="#244F20"
+                    android:backgroundTint="#FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnBackHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Về trang chủ"
+                    android:textAllCaps="false"
+                    android:textColor="#285F20"
+                    android:backgroundTint="#E4F2DE"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
